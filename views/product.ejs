@@ -1,0 +1,13 @@
+creating ejs file for product listing and buy the product
+<h1>Product Listing</h1>
+<ul>
+    <% products.forEach(product => { %>
+        <li>
+            <h2><%= product.name %></h2>
+            <p>Price:<%= product.price %></p>
+            <form action="/buy/<%= product.id %>" method="POST">
+                <button type="submit">Buy</button>
+            </form>
+        </li>
+    <% }) %>
+</ul>
